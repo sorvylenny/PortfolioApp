@@ -1,0 +1,25 @@
+<footer>
+  <div class="content">
+    <div class="card-body">
+      <div class="iframe-container">
+        <iframe src="https://lottie.host/embed/f96df90c-d3ee-4e7b-9dd2-854509219cb4/kxZn4TuhCD.json"></iframe>
+      </div>
+      <div class="container-Conct">
+        <div class="d-flex justify-content-center" *ngFor="let item of list_Icon">
+          <a [href]="item.links" target="_blank">
+            <button class="btn btn-danger buttons">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                [class]="item.description" viewBox="0 0 16 16">
+                <path [attr.d]="item.description2"></path>
+                <path [attr.d]="item.description3"></path>
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+    <h4 class="footer_text"> © {{currentYear}} Copyright: Realizado por Katherine Flores</h4>
+  </div>
+</footer>

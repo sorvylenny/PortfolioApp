@@ -1,0 +1,125 @@
+<div class="container">
+    <p class="title">Desarolladora</p>
+
+    <div class="personal-info-container">
+      <div class="imagen-perfil"></div>
+      <div>
+        <p class="parrafo" style="font-weight: 500;">Hola mi nombre es Katherine Flores, soy desarrolladora, Me apasiona la tecnología y me dedico a crear cosas que vivan en internet. Además, me destaco por ser colaboradora en mi trabajo y atenta a los detalles. Actualmente resido en Colombia.</p>
+      </div>
+  </div>
+</div>
+<span class="title">Contáctame</span>
+<div class="contact-container">
+  <div class="icon">
+    <div class="card_contact">
+      <div class="social-links" *ngFor="let item of list_Icon">
+        <a [href]="item.links" target="_blank"
+          (click)="item.links && abrirEnNuevaPagina(item.links)">
+          <div id="{{item.description}}{{item.description2}}{{item.description3}}" class="social-btn flex-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              [class]="item.description"
+              viewBox="0 0 16 16">
+              <path [attr.d]="item.description2"></path>
+              <path [attr.d]="item.description3"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="iframe-container">
+  <iframe src="https://lottie.host/embed/4c8dd54a-acd1-44db-b19d-e6c9b0b82a5f/huCAS0dxnv.json"></iframe>
+</div>
+<span class="title" style="margin-top: 20px;">Sobre mi</span>
+<div class="container_personal">
+  <div class="card_personal">
+    <div class="content">
+      <p class="para">
+        Soy Tecnóloga en Informática con 2 años de experiencia en el desarrollo web y recientemente he empezado a explorar el ámbito del desarrollo de aplicaciones móviles. Me especializo en el uso de tecnologías como Angular, TypeScript, CSS, HTML, JavaScript, Ionic, y he extendido mis conocimientos a tecnologías backend incluyendo C#, Express.js, así como el manejo de bases de datos con SQL Server y MongoDB. Además, he comenzado a trabajar con Ionic para el desarrollo de aplicaciones móviles.
+       Fuera del ámbito profesional, mis pasiones incluyen la música, el baile, los viajes, el canto, así como disfrutar de películas y series.
+      </p>
+    </div>
+  </div>
+</div>
+
+<span class="title" style="margin-top: 60px; margin-bottom: 40px;">Experiencias</span>
+<div class="container_personal">
+  <div class="personal-experience-container">
+    <div class="card_experience" *ngFor="let item of list_Experiencias">
+      <div class="content">
+        <div class="para">
+          <span class="text-span">{{ item.description }}</span>
+          <span class="text-span">{{ item.description2 }}</span>
+          <p class="parrafo">{{ item.description3 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="iframe-container">
+  <iframe src="https://lottie.host/embed/f2f4a01e-5080-4e48-b12c-4bff51e0eefa/cRpr4wVkKg.json"></iframe>
+</div>
+<span class="title" style="margin-top: 30px; margin-bottom: 30px;">Skills</span>
+<div class="container_skills">
+
+<div class="card" *ngFor="let item of list_Tecnologias">
+  <div>
+    <img [src]="item.links" alt="">
+  </div>
+</div>
+</div>
+
+<span class="title" style="margin-top: 60px; margin-bottom: 30px;">Proyectos</span>
+<div class="iframe-container">
+  <iframe src="https://lottie.host/embed/d32f33de-2ee9-4ee9-9e70-876e70739f11/igCawGLtv5.json"></iframe>
+</div>
+<span class="title" style="margin-top: 30px; margin-bottom: 30px;">Frontend</span>
+<div class="container_proyects">
+  <div class="card_proyects"  *ngFor="let item of list_Proyectos">
+    <div class="header"> <video width="100%" height="auto" controls>
+      <source [src]="item.videoUrl" type="video/mp4">
+    </video></div>
+    <div class="info">
+      <p class="title_proyect">{{item.description}}</p>
+      <p class="parrafo">{{item.description2}}</p>
+    </div>
+    <div class="footer">
+      <p class="tag"><strong>{{ item.title }}</strong></p>
+      <ng-container *ngIf="item.description !== 'System Sales'">
+      <a href="{{item.links}}" target="_blank" class="action">Ver App</a>
+      </ng-container>
+      <a href="{{item.description3}}" target="_blank" class="action">Ver Codigo</a>
+    </div>
+ </div>
+</div>
+
+<span class="title" style="margin-top: 30px; margin-bottom: 30px;">Backend</span>
+
+<div class="container_proyects">
+  <div class="card_proyects" *ngFor="let item of list_Proyectos2">
+    <div class="header" *ngIf="item.videoUrl">
+      <div class="iframe-container">
+        <iframe [src]="sanitizeUrl(item.videoUrl)"></iframe>
+      </div>
+    </div>
+    <div class="info">
+      <p class="title_proyect">{{ item.description }}</p>
+      <p class="parrafo">{{ item.description2 }}</p>
+    </div>
+    <div class="footer">
+      <p class="tag"><strong>{{ item.title }}</strong></p>
+      <a href="{{ item.links }}" target="_blank" class="action">Ver App</a>
+      <a href="{{ item.description3 }}" target="_blank" class="action">Ver Codigo</a>
+    </div>
+  </div>
+</div>
+
+  <app-footer></app-footer>
+
+
+
