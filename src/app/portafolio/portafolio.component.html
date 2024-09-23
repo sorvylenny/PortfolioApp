@@ -124,7 +124,9 @@
           <p class="tag"><strong>{{ item.title }}</strong></p>
         </div>
         <div class="d-flex">
-          <a href="{{ item.links }}" target="_blank" class="action">Ver App</a>
+          <ng-container *ngIf="item.description !== 'System Sales Api'">
+            <a href="{{ item.links }}" target="_blank" class="action">Ver App</a>
+          </ng-container>
           <a href="{{ item.description3 }}" target="_blank" class="action">Ver Código</a>
         </div>
       </div>
