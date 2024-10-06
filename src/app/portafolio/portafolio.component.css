@@ -359,10 +359,6 @@ a {
     width: 90%;
   }
 
-  .para {
-    font-size: 1rem;
-  }
-
   .content .para {
     font-size: 1rem;
   }
@@ -373,6 +369,10 @@ a {
 
   .title {
     font-size: 3rem;
+  }
+
+  .mb-title {
+    margin-bottom: 3rem;
   }
 
   .personal-info-container {
@@ -396,6 +396,11 @@ a {
 
   .card_experience {
     width: 100%;
+    margin-bottom: .5rem;
+  }
+
+  .para .parrafo {
+    font-size: .85rem !important;
   }
 
   .card {
