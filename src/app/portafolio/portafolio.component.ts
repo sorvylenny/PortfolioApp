@@ -257,7 +257,7 @@ export class PortafolioComponent {
     const targetTop = target?.offsetTop ?? 0;
     const startTop = window.scrollY;
     const distance = targetTop - startTop;
-    const duration = 650;
+    const duration = 480;
     let startTime: number | null = null;
 
     const easeInOutCubic = (progress: number): number => {
