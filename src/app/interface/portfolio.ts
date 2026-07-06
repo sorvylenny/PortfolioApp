@@ -1,4 +1,7 @@
 export interface Portfolio {
+  name?: string;
+  badge?: string;
+  category?: string;
   title?: string;
   videoUrl?: string;
   description?: string;

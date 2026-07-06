@@ -1,15 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-body, html {
-  background-color:#F8F6E3;
-  margin-top: -5px;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  min-height: 100%;
+  margin: 0;
+  background: #fffaf0;
+  color: #2f3037;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
 
-
-
-
+img,
+video,
+iframe {
+  max-width: 100%;
+}
